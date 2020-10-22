@@ -14,7 +14,10 @@
 		17E202E6253C12860051A78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E202E5253C12860051A78B /* Assets.xcassets */; };
 		17E202E9253C12860051A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E202E7253C12860051A78B /* LaunchScreen.storyboard */; };
 		17E202F6253CD5790051A78B /* GoogleService-Info(1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 17E202F5253CD5790051A78B /* GoogleService-Info(1).plist */; };
-		F5512E41CBBD160A5A7A7A27 /* Pods_MDB_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7AD9A3AE23F8E82C242D0D /* Pods_MDB_Social.framework */; };
+		17E2030C253ECED80051A78B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2030B253ECED80051A78B /* LoginViewController.swift */; };
+		17E2030F253ECEEC0051A78B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E2030E253ECEEC0051A78B /* RegisterViewController.swift */; };
+		17E20312253ED39B0051A78B /* FirebaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E20311253ED39B0051A78B /* FirebaseRequest.swift */; };
+		274AD6976ADDE5CFA25E98A2 /* Pods_MDB_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF6EFDA627157A699789F54 /* Pods_MDB_Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +30,12 @@
 		17E202E8253C12860051A78B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17E202EA253C12860051A78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E202F5253CD5790051A78B /* GoogleService-Info(1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info(1).plist"; sourceTree = "<group>"; };
-		28C85F2B5F59728DCA773D83 /* Pods-MDB Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDB Social.release.xcconfig"; path = "Target Support Files/Pods-MDB Social/Pods-MDB Social.release.xcconfig"; sourceTree = "<group>"; };
-		3D8F44EC64D3BBDA0759FB3B /* Pods-MDB Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDB Social.debug.xcconfig"; path = "Target Support Files/Pods-MDB Social/Pods-MDB Social.debug.xcconfig"; sourceTree = "<group>"; };
-		BC7AD9A3AE23F8E82C242D0D /* Pods_MDB_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDB_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E2030B253ECED80051A78B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		17E2030E253ECEEC0051A78B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		17E20311253ED39B0051A78B /* FirebaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRequest.swift; sourceTree = "<group>"; };
+		6304B02D7E5B33BB39116965 /* Pods-MDB Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDB Social.debug.xcconfig"; path = "Target Support Files/Pods-MDB Social/Pods-MDB Social.debug.xcconfig"; sourceTree = "<group>"; };
+		672A57D64ABBFB396633543D /* Pods-MDB Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDB Social.release.xcconfig"; path = "Target Support Files/Pods-MDB Social/Pods-MDB Social.release.xcconfig"; sourceTree = "<group>"; };
+		EFF6EFDA627157A699789F54 /* Pods_MDB_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDB_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5512E41CBBD160A5A7A7A27 /* Pods_MDB_Social.framework in Frameworks */,
+				274AD6976ADDE5CFA25E98A2 /* Pods_MDB_Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +56,7 @@
 				17E202DB253C12820051A78B /* MDB Social */,
 				17E202DA253C12820051A78B /* Products */,
 				87994A26705613973461003B /* Pods */,
-				3FBFE633C54D942EEF7447D2 /* Frameworks */,
+				9FF49B3E72E3014D221D8B4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +76,9 @@
 				17E202E0253C12820051A78B /* ViewController.swift */,
 				17E202F5253CD5790051A78B /* GoogleService-Info(1).plist */,
 				17E202E2253C12820051A78B /* Main.storyboard */,
+				17E2030B253ECED80051A78B /* LoginViewController.swift */,
+				17E20311253ED39B0051A78B /* FirebaseRequest.swift */,
+				17E2030E253ECEEC0051A78B /* RegisterViewController.swift */,
 				17E202E5253C12860051A78B /* Assets.xcassets */,
 				17E202E7253C12860051A78B /* LaunchScreen.storyboard */,
 				17E202EA253C12860051A78B /* Info.plist */,
@@ -77,21 +86,21 @@
 			path = "MDB Social";
 			sourceTree = "<group>";
 		};
-		3FBFE633C54D942EEF7447D2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BC7AD9A3AE23F8E82C242D0D /* Pods_MDB_Social.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		87994A26705613973461003B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3D8F44EC64D3BBDA0759FB3B /* Pods-MDB Social.debug.xcconfig */,
-				28C85F2B5F59728DCA773D83 /* Pods-MDB Social.release.xcconfig */,
+				6304B02D7E5B33BB39116965 /* Pods-MDB Social.debug.xcconfig */,
+				672A57D64ABBFB396633543D /* Pods-MDB Social.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9FF49B3E72E3014D221D8B4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFF6EFDA627157A699789F54 /* Pods_MDB_Social.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,11 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17E202ED253C12860051A78B /* Build configuration list for PBXNativeTarget "MDB Social" */;
 			buildPhases = (
-				186FAAA7E253995D8C61CCD9 /* [CP] Check Pods Manifest.lock */,
+				BB9DC2594D52E78451650519 /* [CP] Check Pods Manifest.lock */,
 				17E202D5253C12820051A78B /* Sources */,
 				17E202D6253C12820051A78B /* Frameworks */,
 				17E202D7253C12820051A78B /* Resources */,
-				2F45C6C3A06D3C7724A1CCDB /* [CP] Embed Pods Frameworks */,
+				5F3F530213892ADA4BFB8059 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,7 +172,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		186FAAA7E253995D8C61CCD9 /* [CP] Check Pods Manifest.lock */ = {
+		5F3F530213892ADA4BFB8059 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MDB Social/Pods-MDB Social-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MDB Social/Pods-MDB Social-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MDB Social/Pods-MDB Social-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB9DC2594D52E78451650519 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,23 +211,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F45C6C3A06D3C7724A1CCDB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MDB Social/Pods-MDB Social-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MDB Social/Pods-MDB Social-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MDB Social/Pods-MDB Social-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E2030C253ECED80051A78B /* LoginViewController.swift in Sources */,
+				17E2030F253ECEEC0051A78B /* RegisterViewController.swift in Sources */,
 				17E202E1253C12820051A78B /* ViewController.swift in Sources */,
 				17E202DD253C12820051A78B /* AppDelegate.swift in Sources */,
+				17E20312253ED39B0051A78B /* FirebaseRequest.swift in Sources */,
 				17E202DF253C12820051A78B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +367,7 @@
 		};
 		17E202EE253C12860051A78B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D8F44EC64D3BBDA0759FB3B /* Pods-MDB Social.debug.xcconfig */;
+			baseConfigurationReference = 6304B02D7E5B33BB39116965 /* Pods-MDB Social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,7 +386,7 @@
 		};
 		17E202EF253C12860051A78B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28C85F2B5F59728DCA773D83 /* Pods-MDB Social.release.xcconfig */;
+			baseConfigurationReference = 672A57D64ABBFB396633543D /* Pods-MDB Social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
