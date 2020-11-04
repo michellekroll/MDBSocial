@@ -64,6 +64,14 @@
                                 <rect key="frame" x="184" y="629" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hi-Rs-7i5" userLabel="dummyButton">
+                                <rect key="frame" x="20" y="752" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="dummytoNewSocialView"/>
+                                <connections>
+                                    <segue destination="n0G-FD-GBn" kind="show" id="Goe-LL-EEf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,17 +111,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="94"/>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--NewSocialView-->
         <scene sceneID="kCC-dE-6wa">
             <objects>
-                <viewControllerPlaceholder id="n0G-FD-GBn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NewSocialView" referencedIdentifier="NewSocialView" id="n0G-FD-GBn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9D0-M7-nzh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeI-ek-oQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="430"/>
+            <point key="canvasLocation" x="444" y="431"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="CvV-yS-NR1">
