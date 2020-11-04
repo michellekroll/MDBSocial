@@ -72,9 +72,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-a3-la7">
                                         <rect key="frame" x="0.0" y="522.5" width="336" height="30"/>
                                         <state key="normal" title="Save Event"/>
-                                        <connections>
-                                            <segue destination="dCr-4x-RmN" kind="show" id="oOW-Ws-zl2"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -115,7 +112,7 @@
         <!--View Controller-->
         <scene sceneID="jBV-ln-xWB">
             <objects>
-                <viewController storyboardIdentifier="NewSocialView" modalPresentationStyle="fullScreen" id="dCr-4x-RmN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedSocialView" modalPresentationStyle="fullScreen" id="dCr-4x-RmN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="atS-yW-mYA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

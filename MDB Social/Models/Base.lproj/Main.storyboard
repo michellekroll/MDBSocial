@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--NewSocialView-->
+        <!--FeedSocialView-->
         <scene sceneID="kCC-dE-6wa">
             <objects>
-                <viewControllerPlaceholder storyboardName="NewSocialView" referencedIdentifier="NewSocialView" id="n0G-FD-GBn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NewSocialView" referencedIdentifier="FeedSocialView" id="n0G-FD-GBn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9D0-M7-nzh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeI-ek-oQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -292,7 +292,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QYE-38-LaL"/>
+        <segue reference="Goe-LL-EEf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

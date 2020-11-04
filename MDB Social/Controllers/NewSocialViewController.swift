@@ -74,24 +74,27 @@ class NewSocialViewController: UIViewController {
     }
       @IBAction func saveEventTapped(_ sender: Any) {
       
-//        FirebaseRequest.shared.addEventInfo(eventPicture: imageUrl, eventName: firstname, date: date, desc: desc, completion: { [weak self] in
-//                      guard let strongSelf = self else { return }
-//                      strongSelf.performSegue(withIdentifier: "regisToMain", sender: nil)})
-//
-        }
+        if
+        
+        
+      FirebaseRequest.shared.addEventInfo(eventPicture: imageUrl, eventName: firstname, date: date, desc: desc, completion: { [weak self] in
+                   guard let strongSelf = self else { return }
+
+        self.dismiss(animated: true, completion: nil)
+       }
 }
 extension NewSocialViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    private func imagePickerController(_ picker: UIImagePickerController,
-                                    didFinishPickingMediaWithInfo info: [String : Any]){
+    internal func imagePickerController(_ picker: UIImagePickerController,
+                                       didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         uploadImageButton.removeFromSuperview()
-        let chosenImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage
+        if let chosenImage = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView.image = chosenImage
+        }
         imageView.contentMode = .scaleAspectFit
-        imageView.image = chosenImage // this is not actually helping to display the image
-        print(imageView.image == nil)
-        dismiss(animated:true, completion: nil)
+        picker.dismiss(animated:true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 }
