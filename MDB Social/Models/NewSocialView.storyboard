@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Social View Controller-->
+        <scene sceneID="gSm-cV-elZ">
+            <objects>
+                <viewController id="hTG-6Y-qig" customClass="NewSocialViewController" customModule="MDB_Social" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8qx-O5-yL4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's create your event." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7S-wP-2Bc">
+                                <rect key="frame" x="20" y="285" width="336" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="Vrm-QS-4r6"/>
+                                    <constraint firstAttribute="height" constant="36" id="lim-Kb-y5r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zG-o9-DMQ">
+                                <rect key="frame" x="48" y="338" width="139" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Give your event a name." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Tvv-QC-Nwo">
+                                <rect key="frame" x="48" y="380" width="282" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="k0q-N7-anv"/>
+                                    <constraint firstAttribute="height" constant="34" id="xJ3-xk-iPZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date picker:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7x-yG-H9O">
+                                <rect key="frame" x="48" y="442" width="135" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QyZ-Rd-rJb">
+                                <rect key="frame" x="1" y="480" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="Sq2-vZ-I3o"/>
+                                    <constraint firstAttribute="height" constant="162" id="tUU-Tr-nCr"/>
+                                </constraints>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqN-eU-QK1">
+                                <rect key="frame" x="48" y="650" width="135" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a description for your event." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pxs-Ph-K0H">
+                                <rect key="frame" x="48" y="692" width="247.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5E-9w-D7b">
+                                <rect key="frame" x="292" y="247" width="102" height="30"/>
+                                <state key="normal" title="Upload Picture"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ywQ-ls-Ib1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="Bbp-bc-Tnc"/>
+                                    <constraint firstAttribute="height" constant="239" id="JJT-W2-YmQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-a3-la7">
+                                <rect key="frame" x="169" y="801" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y0H-Q6-wpo"/>
+                                    <constraint firstAttribute="width" constant="76" id="aRV-AM-iaH"/>
+                                </constraints>
+                                <state key="normal" title="Save Event"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i2j-8t-g1A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aqN-eU-QK1" firstAttribute="top" secondItem="QyZ-Rd-rJb" secondAttribute="bottom" constant="8" symbolic="YES" id="5ng-RR-hky"/>
+                            <constraint firstItem="i2j-8t-g1A" firstAttribute="trailing" secondItem="Y5E-9w-D7b" secondAttribute="trailing" constant="20" id="908-Wz-L4k"/>
+                            <constraint firstItem="Z7x-yG-H9O" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" constant="48" id="96h-uU-zzD"/>
+                            <constraint firstItem="aqN-eU-QK1" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" constant="48" id="AJC-ew-9wb"/>
+                            <constraint firstItem="c7S-wP-2Bc" firstAttribute="top" secondItem="Y5E-9w-D7b" secondAttribute="bottom" constant="8" symbolic="YES" id="CYS-Ss-Wyc"/>
+                            <constraint firstItem="0zG-o9-DMQ" firstAttribute="top" secondItem="c7S-wP-2Bc" secondAttribute="bottom" constant="17" id="Gfh-ai-N9Q"/>
+                            <constraint firstItem="ywQ-ls-Ib1" firstAttribute="trailing" secondItem="i2j-8t-g1A" secondAttribute="trailing" id="Hgg-EW-jOX"/>
+                            <constraint firstItem="Tvv-QC-Nwo" firstAttribute="top" secondItem="0zG-o9-DMQ" secondAttribute="bottom" constant="12" id="I2Z-dd-c3i"/>
+                            <constraint firstItem="c7S-wP-2Bc" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" constant="20" id="I76-JS-fCJ"/>
+                            <constraint firstItem="QyZ-Rd-rJb" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" constant="1" id="Mdp-6R-qiG"/>
+                            <constraint firstItem="QyZ-Rd-rJb" firstAttribute="top" secondItem="Z7x-yG-H9O" secondAttribute="bottom" constant="8" symbolic="YES" id="OLt-y8-CUa"/>
+                            <constraint firstItem="pxs-Ph-K0H" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" constant="48" id="QHx-Nb-yeL"/>
+                            <constraint firstItem="fZ7-a3-la7" firstAttribute="centerX" secondItem="8qx-O5-yL4" secondAttribute="centerX" id="Tt8-Mw-GyL"/>
+                            <constraint firstItem="pxs-Ph-K0H" firstAttribute="top" secondItem="aqN-eU-QK1" secondAttribute="bottom" constant="12" id="UDj-br-Mc7"/>
+                            <constraint firstItem="fZ7-a3-la7" firstAttribute="top" secondItem="pxs-Ph-K0H" secondAttribute="bottom" constant="75" id="Ues-Er-rd4"/>
+                            <constraint firstItem="ywQ-ls-Ib1" firstAttribute="top" secondItem="8qx-O5-yL4" secondAttribute="top" id="VYn-aj-cKe"/>
+                            <constraint firstItem="Y5E-9w-D7b" firstAttribute="top" secondItem="ywQ-ls-Ib1" secondAttribute="bottom" constant="8" symbolic="YES" id="dJ2-OQ-8tL"/>
+                            <constraint firstItem="Tvv-QC-Nwo" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" constant="48" id="jU1-zh-20r"/>
+                            <constraint firstItem="0zG-o9-DMQ" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" constant="48" id="jdL-16-PCZ"/>
+                            <constraint firstItem="QyZ-Rd-rJb" firstAttribute="top" secondItem="Z7x-yG-H9O" secondAttribute="bottom" constant="8" symbolic="YES" id="nQc-Hp-ORp"/>
+                            <constraint firstItem="Z7x-yG-H9O" firstAttribute="top" secondItem="Tvv-QC-Nwo" secondAttribute="bottom" constant="28" id="tBh-KM-uZn"/>
+                            <constraint firstItem="ywQ-ls-Ib1" firstAttribute="leading" secondItem="i2j-8t-g1A" secondAttribute="leading" id="yBN-Et-YbB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EventPicture" destination="ywQ-ls-Ib1" id="B8V-q5-mUn"/>
+                        <outlet property="dateHeader" destination="Z7x-yG-H9O" id="I2t-SH-fxY"/>
+                        <outlet property="datePicker" destination="QyZ-Rd-rJb" id="DDf-Fa-zms"/>
+                        <outlet property="descHeader" destination="aqN-eU-QK1" id="euR-VF-Tmt"/>
+                        <outlet property="descTextField" destination="pxs-Ph-K0H" id="tKg-sb-rk7"/>
+                        <outlet property="headerText" destination="c7S-wP-2Bc" id="WSc-Sr-oO2"/>
+                        <outlet property="imageView" destination="ywQ-ls-Ib1" id="qzH-iE-Bqo"/>
+                        <outlet property="nameHeader" destination="0zG-o9-DMQ" id="Dxc-rg-hbH"/>
+                        <outlet property="nameTextField" destination="Tvv-QC-Nwo" id="mji-6b-0s4"/>
+                        <outlet property="uploadImageButton" destination="Y5E-9w-D7b" id="VM7-bd-ZmH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yps-Pv-BaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602.89855072463774" y="-87.053571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

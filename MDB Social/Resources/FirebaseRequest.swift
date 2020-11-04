@@ -95,5 +95,27 @@ class FirebaseRequest {
     private enum FIBCollection: String {
         case userInfo
     }
+    
+//    func addEventInfo(eventPicture: , eventName: String, date: Date, desc: String) {
+//        let ref = getReference(forCollection: .eventInfo)
+//        let docData: [String: Any] = [
+//            "eventDate": date,
+//            "eventDesc": desc,
+//            "eventName": eventName,
+//            "imageUrl": eventPicture,
+//            "numInterested": 0,
+//        ]
+//        
+//        ref.document().setData(docData) { error in
+//            guard error == nil else {
+//                print("Firebase Error")
+//                return
+//            }
+//            completion?()
+//        }
+//        
+//    }
+
+    
 }
 
