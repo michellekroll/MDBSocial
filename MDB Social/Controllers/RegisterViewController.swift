@@ -39,9 +39,9 @@ class RegisterViewController: UIViewController {
             
         noteLabel.text = "Please enter your full name."
             
-        firstNameLabel.text = "FIRST NAME:"
+        firstNameLabel.text = "First Name:"
     
-        lastNameLabel.text = "LAST NAME:"
+        lastNameLabel.text = "Last Name:"
             
         firstNameTextField.placeholder = "First Name"
         firstNameTextField.delegate = self
@@ -49,23 +49,23 @@ class RegisterViewController: UIViewController {
         lastNameTextField.placeholder = "Last Name"
         lastNameTextField.delegate = self
             
-        dobLabel.text = "DATE OF BIRTH:"
+        dobLabel.text = "Date of Birth:"
         dobTextField.placeholder = "MM-DD-YYYY"
         dobTextField.delegate = self
         dobTextField.tag = 1
         dobTextField.keyboardType = .numberPad
             
-        emailLabel.text = "EMAIL:"
+        emailLabel.text = "Email:"
         emailTextField.placeholder = "example@domain.com"
         emailTextField.delegate = self
         emailTextField.keyboardType = .emailAddress
             
-        mobileLabel.text = "MOBILE:"
+        mobileLabel.text = "Mobile:"
         mobileTextField.placeholder = "(123)-456-789"
         mobileTextField.delegate = self
         mobileTextField.keyboardType = .numberPad
 
-        passwordLabel.text = "PASSWORD:"
+        passwordLabel.text = "Password:"
         passwordTextField.placeholder = "********"
         passwordTextField.delegate = self
             
@@ -120,7 +120,7 @@ class RegisterViewController: UIViewController {
                         guard let strongSelf = self else {
                             return
                         }
-                        strongSelf.performSegue(withIdentifier: "regisToMain", sender: nil)
+                        strongSelf.performSegue(withIdentifier: "FeedTable", sender: self)
                     })
                 case .failure(let error):
                     switch error {

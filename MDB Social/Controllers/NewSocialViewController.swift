@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseStorage
+import FirebaseFirestoreSwift
 
 class NewSocialViewController: UIViewController {
     
@@ -41,7 +42,6 @@ class NewSocialViewController: UIViewController {
     }
     
     @objc func addPhoto(_ sender: UIButton) {
-        print("entered1")
         let alert = UIAlertController(title: "Choose an image", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
             self.openCamera()
@@ -90,17 +90,16 @@ class NewSocialViewController: UIViewController {
                 return
             }
             storageRef.downloadURL { (url, error) in
-                document.setData([
-                    "eventDate": self.datePicker.date,
-                    "eventDesc": self.descTextField.text!,
-                    "eventName": self.nameTextField.text!,
-                    "imageUrl": url!.absoluteString,
-                    "numInterested": 1,
-                ])
+                let event = Event.init(name: self.nameTextField.text!, date: self.datePicker.date, creator: "Patrick" , numInterested: 1, imgURL: url!.absoluteString)
+                do {
+                    try document.setData(from: event)
+                } catch {
+                    print(error)
+                }
+                
+                
                 self.dismiss(animated: true, completion: nil)
             }
-            
-//            FirebaseRequest.shared.addEventInfo(eventPicture: metadata!.downloadURL()!.absoluteString!, eventName: nameTextField.text!, date: datePicker.date, desc: descTextField.text!)
    
     }
     }

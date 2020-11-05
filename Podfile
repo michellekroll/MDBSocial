@@ -7,6 +7,7 @@ target 'MDB Social' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'FirebaseFirestoreSwift'
   # Pods for MDB Social
 
 end

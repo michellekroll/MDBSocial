@@ -32,12 +32,12 @@ class LoginViewController: UIViewController {
             
             headerLabel.text = "Login"
             
-            emailLabel.text = "YOUR EMAIL:"
+            emailLabel.text = "Your Email:"
             emailTextField.placeholder = "example@domain.com"
             emailTextField.delegate = self
             emailTextField.keyboardType = .emailAddress
             
-            passwordLabel.text = "PASSWORD"
+            passwordLabel.text = "Password"
             passwordTextField.placeholder = "*********"
             passwordTextField.delegate = self
             
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
                 
                 switch result {
                 case .success(let user):
-                    strongSelf.performSegue(withIdentifier: "loginToMain", sender: nil)
+                    strongSelf.performSegue(withIdentifier: "FeedTable", sender: self)
                 case .failure(let error):
                     switch error {
                     case .malformedEmail:
