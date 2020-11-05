@@ -32,12 +32,12 @@ class LoginViewController: UIViewController {
             
             headerLabel.text = "Login"
             
-            emailLabel.text = "YOUR EMAIL:"
+            emailLabel.text = "Your Email:"
             emailTextField.placeholder = "example@domain.com"
             emailTextField.delegate = self
             emailTextField.keyboardType = .emailAddress
             
-            passwordLabel.text = "PASSWORD"
+            passwordLabel.text = "Password"
             passwordTextField.placeholder = "*********"
             passwordTextField.delegate = self
             
