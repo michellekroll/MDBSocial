@@ -120,7 +120,7 @@ class RegisterViewController: UIViewController {
                         guard let strongSelf = self else {
                             return
                         }
-                        strongSelf.performSegue(withIdentifier: "FeedTable", sender: self)
+                        strongSelf.performSegue(withIdentifier: "FeedTable", sender: nil)
                     })
                 case .failure(let error):
                     switch error {

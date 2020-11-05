@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
                 
                 switch result {
                 case .success(let user):
-                    strongSelf.performSegue(withIdentifier: "FeedTable", sender: self)
+                    strongSelf.performSegue(withIdentifier: "FeedTable", sender: nil)
                 case .failure(let error):
                     switch error {
                     case .malformedEmail:
