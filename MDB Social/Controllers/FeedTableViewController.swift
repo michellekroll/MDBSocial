@@ -15,26 +15,36 @@ class FeedTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        read()
+        addFIRListener()
         
     }
     
-    func read() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    
+    
+    func addFIRListener() {
         let db = Firestore.firestore()
-        db.collection("eventInfo").getDocuments { (snapshot, error) in
-          if let error = error {
-            print(error)
-          } else if let snapshot = snapshot {
-            let events: [Event] = snapshot.documents.compactMap {
-              return try? $0.data(as: Event.self)
-            }
-            self.tableData = events
-            self.tableView.reloadData()
-          }
+        db.collection("eventInfo").addSnapshotListener { querySnapshot, error in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                if let snapshot = querySnapshot {
+                    self.tableData = snapshot.documents.compactMap {
+                        return try? $0.data(as: Event.self)
+                    }
+                    self.tableView.reloadData()
+                }
         }
-      }
+    }
     
+    //need a write function that to update corresponding numInterested value in firebase
     
+
+        
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tappedEvent = self.tableData[indexPath.row]
         performSegue(withIdentifier: "DetailVCSegue", sender: self)

@@ -27,10 +27,11 @@ class DetailViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: Any) {
         if !tapped {
-            event.numInterested += 1
+            self.event.numInterested += 1
         } else {
-            event.numInterested -= 1
+            self.event.numInterested -= 1
         }
+        tapped = !tapped
         self.viewDidLoad()
         
     }

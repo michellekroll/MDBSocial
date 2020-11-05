@@ -287,9 +287,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="xkW-kb-YBa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36K-zO-8oL">
+                                    <rect key="frame" x="8" y="7" width="70" height="30"/>
+                                    <state key="normal" title="Add Event"/>
+                                    <connections>
+                                        <segue destination="l78-oI-AYa" kind="presentation" id="FN2-eB-W4x"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="36K-zO-8oL" firstAttribute="leading" secondItem="xkW-kb-YBa" secondAttribute="leading" constant="8" id="M7G-QS-mVH"/>
+                                <constraint firstItem="36K-zO-8oL" firstAttribute="top" secondItem="xkW-kb-YBa" secondAttribute="top" constant="7" id="mDa-yq-rAV"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="240" id="pOO-3m-0VY" customClass="FeedCell" customModule="MDB_Social" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="240"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="240"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pOO-3m-0VY" id="d59-uh-zyW">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
@@ -379,6 +397,14 @@
             </objects>
             <point key="canvasLocation" x="2538" y="120"/>
         </scene>
+        <!--NewSocialView-->
+        <scene sceneID="4Hs-hu-v4q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewSocialView" id="l78-oI-AYa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mym-iT-qOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="492"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="8dl-3e-3di">
             <objects>
@@ -409,13 +435,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number interested: (tap to show interest)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teo-7x-5US">
-                                <rect key="frame" x="133" y="637" width="203" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie8-Hx-96u">
                                 <rect key="frame" x="183" y="701" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -424,6 +443,13 @@
                                     <action selector="buttonTapped:" destination="yOG-PI-LcK" eventType="touchUpInside" id="mQV-IW-mWy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number interested: (tap to show interest)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teo-7x-5US">
+                                <rect key="frame" x="55" y="637" width="314" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DSE-aj-0c5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -467,7 +493,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bgm-kD-MTQ"/>
+        <segue reference="HN0-vp-4tO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
