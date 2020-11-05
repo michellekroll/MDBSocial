@@ -8,10 +8,10 @@
 import UIKit
 import FirebaseAuth
 import Firebase
-
+import FirebaseStorage
 
 class NewSocialViewController: UIViewController {
-
+    
     @IBOutlet weak var EventPicture: UIImageView!
     @IBOutlet weak var uploadImageButton: UIButton!
     @IBOutlet weak var headerText: UILabel!
@@ -23,45 +23,46 @@ class NewSocialViewController: UIViewController {
     @IBOutlet weak var descTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     let picker = UIImagePickerController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-                view.addGestureRecognizer(tap)
+        view.addGestureRecognizer(tap)
         setup()
     }
-
+    
     private func setup() {
         headerText.text = "Let's create your event."
         nameHeader.text = "Event name:"
         dateHeader.text = "Date picker:"
         descHeader.text = "Description:"
         uploadImageButton.addTarget(self, action: #selector(addPhoto), for: .touchUpInside)
-
-    }
-
-    @objc func addPhoto(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Choose an image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
-                    self.openCamera()
-                }))
-
-                alert.addAction(UIAlertAction(title: "Choose from Library", style: .default, handler: { _ in
-                    self.pickImage()
-                }))
-
-                alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-                present(alert, animated: true, completion: nil)
         
     }
-
+    
+    @objc func addPhoto(_ sender: UIButton) {
+        print("entered1")
+        let alert = UIAlertController(title: "Choose an image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Choose from Library", style: .default, handler: { _ in
+            self.pickImage()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     func openCamera() {
         picker.sourceType = .camera
         picker.delegate = self
         picker.allowsEditing = true
         present(picker, animated: true, completion: nil)
     }
-
+    
     func pickImage() {
         picker.sourceType = .photoLibrary
         picker.delegate = self
@@ -72,20 +73,42 @@ class NewSocialViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-      @IBAction func saveEventTapped(_ sender: Any) {
+    
+    
+    @IBAction func saveEventTapped(_ sender: Any) {
+        // Data in memory
+        let data = self.imageView.image!.pngData()!
       
-        if
-        
-        
-      FirebaseRequest.shared.addEventInfo(eventPicture: imageUrl, eventName: firstname, date: date, desc: desc, completion: { [weak self] in
-                   guard let strongSelf = self else { return }
+        print("entered")
+        let document = Firestore.firestore().collection("eventInfo").document()
+        let storageRef = Storage.storage().reference().child(document.documentID)
+        // Create a reference to the file you want to upload
+        // Upload the file to the path "images/rivers.jpg"
+        let uploadTask = storageRef.putData(data, metadata: nil) { (metadata, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            storageRef.downloadURL { (url, error) in
+                document.setData([
+                    "eventDate": self.datePicker.date,
+                    "eventDesc": self.descTextField.text!,
+                    "eventName": self.nameTextField.text!,
+                    "imageUrl": url!.absoluteString,
+                    "numInterested": 1,
+                ])
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+//            FirebaseRequest.shared.addEventInfo(eventPicture: metadata!.downloadURL()!.absoluteString!, eventName: nameTextField.text!, date: datePicker.date, desc: descTextField.text!)
+   
+    }
+    }
 
-        self.dismiss(animated: true, completion: nil)
-       }
 }
 extension NewSocialViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     internal func imagePickerController(_ picker: UIImagePickerController,
-                                       didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+                                        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         uploadImageButton.removeFromSuperview()
         if let chosenImage = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             imageView.image = chosenImage

@@ -72,6 +72,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-a3-la7">
                                         <rect key="frame" x="0.0" y="522.5" width="336" height="30"/>
                                         <state key="normal" title="Save Event"/>
+                                        <connections>
+                                            <action selector="saveEventTapped:" destination="hTG-6Y-qig" eventType="touchUpInside" id="AvH-Uz-645"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

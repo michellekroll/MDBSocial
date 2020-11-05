@@ -6,6 +6,7 @@ target 'MDB Social' do
   use_frameworks!
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   # Pods for MDB Social
 
 end
