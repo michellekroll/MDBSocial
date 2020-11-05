@@ -102,22 +102,12 @@
                         <outlet property="passwordTextField" destination="cES-Qr-CTZ" id="3NQ-P8-Dkd"/>
                         <outlet property="regisButton" destination="zne-vY-Igo" id="a7B-7p-QZj"/>
                         <outlet property="regisPromptLabel" destination="bLe-l3-oRN" id="cT5-5L-HTk"/>
-                        <segue destination="n0G-FD-GBn" kind="show" identifier="loginToMain" id="QYE-38-LaL"/>
+                        <segue destination="25L-xw-YUE" kind="show" identifier="FeedTable" id="Bgm-kD-MTQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
-        </scene>
-        <!--FeedTable-->
-        <scene sceneID="kCC-dE-6wa">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="FeedTable" id="n0G-FD-GBn" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9D0-M7-nzh"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QeI-ek-oQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="444" y="431"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="CvV-yS-NR1">
@@ -282,7 +272,7 @@
                         <outlet property="passwordLabel" destination="yOc-7t-MId" id="V4L-5S-yn1"/>
                         <outlet property="passwordTextField" destination="f5r-5W-b6C" id="guf-ZY-fW4"/>
                         <outlet property="regisButton" destination="bz7-pn-zFg" id="Nfb-Da-TgG"/>
-                        <segue destination="n0G-FD-GBn" kind="show" identifier="regisToMain" id="ujc-9S-Da5"/>
+                        <segue destination="25L-xw-YUE" kind="show" identifier="FeedTable" id="ZHv-DX-dkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CM4-Hw-Fsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -292,7 +282,7 @@
         <!--Feed Table View Controller-->
         <scene sceneID="0pZ-i3-LAY">
             <objects>
-                <tableViewController storyboardIdentifier="FeedTable" id="25L-xw-YUE" customClass="FeedTableViewController" customModule="MDB_Social" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FeedTable" modalPresentationStyle="fullScreen" id="25L-xw-YUE" customClass="FeedTableViewController" customModule="MDB_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q4d-ux-ewW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,6 +371,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="wrD-ai-KDk"/>
+                    <connections>
+                        <segue destination="yOG-PI-LcK" kind="presentation" identifier="DetailVCSegue" id="5f1-vw-EqD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thL-iY-ME4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,7 +384,7 @@
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="yOG-PI-LcK" customClass="DetailViewController" customModule="MDB_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CFb-IE-nFd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xk8-UF-rVc">
@@ -474,7 +467,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ujc-9S-Da5"/>
+        <segue reference="Bgm-kD-MTQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

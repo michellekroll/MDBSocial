@@ -35,10 +35,9 @@ class FeedTableViewController: UITableViewController {
       }
     
     
-    override func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tappedEvent = self.tableData[indexPath.row]
-        performSegue(withIdentifier: "DetailViewController", sender: self)
+        performSegue(withIdentifier: "DetailVCSegue", sender: self)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -59,7 +58,7 @@ class FeedTableViewController: UITableViewController {
         cell.eventNumInterested.text = String(event.numInterested)
         cell.eventCreator.text = event.creator
         cell.eventInterested.setTitle("Interested?", for: .normal)
-
+        cell.eventImageView.load(urlString: event.imgURL)
         return cell
     }
     
@@ -113,5 +112,5 @@ class FeedTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
